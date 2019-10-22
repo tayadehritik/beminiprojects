@@ -8,7 +8,7 @@ public class test {
 
 	public static void main(String[] args) {
 		
-		System.setProperty("webDriver.chrome.driver", "E:\\Yash\\Yash\\chromedriver_win32\\chromedriver.exe");
+		System.setProperty("webDriver.chrome.driver", "E:\Yash\Miniprojects\beminiprojects\chromedriver77.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://mail.google.com");
 		driver.manage().window().maximize();
