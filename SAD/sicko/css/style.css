@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url(back.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 500px;
+    font-family: "Montserrat", sans-serif;
+}
+
+h1,
+h3 {
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.login a {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 22px;
+}
+
+.login input[type="text"],
+input[type="password"] {
+    border: 1px;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #000000;
+    font-size: 20px;
+}
+
+.login {
+    width: 320px;
+    height: 420px;
+    border-radius: 9px;
+    background: rgb(255, 255, 255);
+    color: rgb(73, 73, 73);
+    top: 75%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    -webkit-box-shadow: 0px 0px 10px 2px rgb(70, 70, 70);
+    -moz-box-shadow: 0px 0px 10px 2px rgba(181, 172, 172, 1);
+    box-shadow: 0px 0px 10px 2px rgba(181, 172, 172, 1);
+}
+
+.login p {
+    margin: 0;
+    padding: 0;
+}
+
+.login input {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.login button {
+    padding: 9px 20px;
+    font-size: 22px;
+    background-color: aliceblue;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.login button:hover {
+    background-color: rgb(0, 181, 194);
+    -webkit-box-shadow: 0px 0px 10px 2px rgb(70, 70, 70);
+    -moz-box-shadow: 0px 0px 10px 2px rgba(181, 172, 172, 1);
+    box-shadow: 0px 0px 10px 2px rgba(181, 172, 172, 1);
+}
+
+h4 {
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    transition: all 0.3s ease 0s;
+}
+
+h4:hover {
+    color: rgb(0, 181, 194);
+    text-shadow: 0px 1px 1px rgb(1, 73, 78);
+}
+
+li,
+a,
+button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: rgb(2, 2, 2);
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+.nav__links {
+    align-self: auto;
+    list-style: none;
+}
+
+.nav__links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav__links li a {
+    transition: all 0.3s ease 0s;
+}
+
+button {
+    padding: 9px 25px;
+    background-color: aliceblue;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.submit_btn {
+    padding: 9px 25px;
+    background-color: aliceblue;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover {
+    background-color: rgb(0, 181, 194);
+    -webkit-box-shadow: 0px 0px 10px 2px rgb(70, 70, 70);
+    -moz-box-shadow: 0px 0px 10px 2px rgba(181, 172, 172, 1);
+    box-shadow: 0px 0px 10px 2px rgba(181, 172, 172, 1);
+}
+
+
+/*yhome*/
+
+.inbox {
+    width: 90%;
+    height: max-content;
+    overflow: hidden;
+    border-radius: 9px;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    top: 75%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 40px 30px;
+    -webkit-box-shadow: 0px 0px 10px 2px rgb(70, 70, 70);
+    -moz-box-shadow: 0px 0px 10px 2px rgba(181, 172, 172, 1);
+    box-shadow: 0px 0px 10px 2px rgba(181, 172, 172, 1);
+}
+
+.inbox table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 0;
+}
+
+.inbox table,
+td,
+th {
+    border: 0;
+    text-align: left;
+}
+
+.inbox th,
+td {
+    padding: 15px;
+    border: 0;
+}
+
+.inbox a {
+    margin-left: 50px;
+    float: left;
+    display: block;
+}
+
+.inbox ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    justify-content: space-evenly;
+}
+
+.inbox h1 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.ip {
+    color: rgb(0, 0, 0);
+    font-family: "Montserrat", sans-serif;
+    text-align: left;
+    font-size: 12px;
+}
+
+.ip[type=text]:focus,
+textarea:focus {
+    border: 3px solid rgba(0, 0, 0, 0.445);
+}
+
+.ip[type=text],
+textarea {
+    width: 100%;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid rgba(204, 204, 204, 0.418);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    resize: none;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(0, 0, 0);
+}
+
+
+/*yregister*/
+
+.frm {
+    width: 90%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 9px;
+    background: rgb(255, 255, 255);
+    color: rgb(73, 73, 73);
+    top: 75%;
+    left: 50%;
+    position: relative;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 40px 30px;
+    -webkit-box-shadow: 0px 0px 10px 2px rgb(70, 70, 70);
+    -moz-box-shadow: 0px 0px 10px 2px rgba(181, 172, 172, 1);
+    box-shadow: 0px 0px 10px 2px rgba(181, 172, 172, 1);
+}
+
+
+/*yhome inboxtable*/
+
+.inboxtable table,
+td,
+th {
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.inboxtable table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.inboxtable th,
+td {
+    padding: 15px;
+}
+
+.inboxtable button {
+    padding: 9px 20px;
+    font-size: 20px;
+    background-color: aliceblue;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.inboxtable button:hover {
+    background-color: rgb(0, 181, 194);
+    -webkit-box-shadow: 0px 0px 10px 2px rgb(70, 70, 70);
+    -moz-box-shadow: 0px 0px 10px 2px rgba(181, 172, 172, 1);
+    box-shadow: 0px 0px 10px 2px rgba(181, 172, 172, 1);
+}
+
+.welcome h1 {
+    font-size: 30%;
+}
