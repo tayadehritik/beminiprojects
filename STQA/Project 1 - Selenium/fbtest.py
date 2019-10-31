@@ -4,18 +4,10 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
 
 loginname = 'yashgarudkar@gmail.com'
-password = 'OnePunchMan_6997'
+password = 'testpassword'
 IEdriverlocation = "E:\\Yash\\Yash\\chromedriver_win32\\chromedriver.exe"
 driver = webdriver.Chrome(IEdriverlocation)
 
-'''options = Options();
-options.add_argument("--headless");
-options.add_argument("--start-maximized");
-options.add_argument("--disable-notifications");
-options.add_argument("--incognito");
-
-driver = webdriver.Chrome(options=Options(), executable_path="E:\\Yash\\Yash\\chromedriver_win32\\chromedriver.exe");
-'''
 driver.get('http://www.facebook.com')
 driver.maximize_window()
 print("Opened Facebook")
@@ -49,16 +41,19 @@ time.sleep(2)
 profile = driver.find_element_by_xpath('/html/body/div[1]/div[2]/div/div[1]/div/div/div/div[2]/div[1]/div[1]/div/a')
 profile.click()
 print('Profile opened')
-time.sleep(2)
+time.sleep(3)
 
 accsetts = driver.find_element_by_id('logoutMenu')
 accsetts.click()
 print('Logout menu clicked')
-time.sleep(3)
+time.sleep(15)
+
 
 logout = driver.find_element_by_xpath('//span[@class="_54nh"][text()="Log Out"]')
+#logout= driver.find_element_by_xpath('/html/body/div[25]/div/div/div/div/div[1]/div/div/ul/li[19]/a')
 logout.click()
 print('Logged out successfully!')
+time.sleep(2)
 print('Now Closing Window')
 print('Test carried out successfully!')
 time.sleep(3)
