@@ -21,7 +21,6 @@ $id = $_SESSION['sid'];
         <h4>SickoMail</h4>
         <nav>
             <ul class="nav__links">
-                <li><a href="yaboutus.php"><button>ABOUT US</button></a></li>
                 <li><a href="yhome.php?chk=logout"><button>LOGOUT</button></a></li>
             </ul>
         </nav>
@@ -87,15 +86,15 @@ $id = $_SESSION['sid'];
             $dd = mysqli_query($con, $sql);
             $row = mysqli_fetch_object($dd);
             echo "<br>";
-            echo "<th>";
+            echo "<tr>";
             echo "<td>Subject :</td>";
             echo "<td>" . $row->sub . "</td>";
-            echo "</th>";
-            echo "<th>";
+            echo "</tr><br><br>";
+            echo "<tr>";
             echo "<td>Message :</td>";
             echo "<td>" . $row->msg . "</td>";
-            echo "</th>";
-            echo "<th><a href='yhome.php'><button>Go Back</button></a></th>";
+            echo "</tr><br><br>";
+            echo "<tr><a href='yhome.php'><button>Go Back</button></a></tr>";
         }
         @$cheklist = $_REQUEST['ch'];
         if (isset($_GET['delete'])) {

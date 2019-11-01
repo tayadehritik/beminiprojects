@@ -21,7 +21,6 @@ $id = $_SESSION['sid'];
         <h4>SickoMail</h4>
         <nav>
             <ul class="nav__links">
-                <li><a href="yaboutus.php"><button>ABOUT US</button></a></li>
                 <li><a href="yhome.php?chk=logout"><button>LOGOUT</button></a></li>
             </ul>
         </nav>

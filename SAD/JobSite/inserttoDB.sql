@@ -1,2 +1,0 @@
-INSERT INTO jobs(salary,job_title,company,job_type,location,job_description) values('35000','Frontend Developer','Xento Systems','Full-Time','Magarpatta City, Pune','Frontend developmet invloves UI/UX design for better and easier user experience');
-INSERT INTO jobs(salary,job_title,company,job_type,location,job_description) values('30000','Backend Developer','Entrata','Summer Intern','Frisco, Texas, USA','Backendnd development invloves server side application development, it is more concerned of the functions to be performed by the website.');

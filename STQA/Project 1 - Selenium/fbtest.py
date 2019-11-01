@@ -1,12 +1,11 @@
 import time
 from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
 
 loginname = 'yashgarudkar@gmail.com'
 password = 'testpassword'
-IEdriverlocation = "E:\\Yash\\Yash\\chromedriver_win32\\chromedriver.exe"
-driver = webdriver.Chrome(IEdriverlocation)
+chrdriv = "E:\\Yash\\Yash\\chromedriver_win32\\chromedriver.exe"
+driver = webdriver.Chrome(chrdriv)
 
 driver.get('http://www.facebook.com')
 driver.maximize_window()
@@ -48,16 +47,14 @@ accsetts.click()
 print('Logout menu clicked')
 time.sleep(15)
 
-
 logout = driver.find_element_by_xpath('//span[@class="_54nh"][text()="Log Out"]')
 #logout= driver.find_element_by_xpath('/html/body/div[25]/div/div/div/div/div[1]/div/div/ul/li[19]/a')
 logout.click()
 print('Logged out successfully!')
 time.sleep(2)
+
 print('Now Closing Window')
-print('Test carried out successfully!')
 time.sleep(3)
+
 driver.close()
-
-
-
+print('Test carried out successfully!')

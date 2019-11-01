@@ -19,7 +19,8 @@
         </nav>
     </header>
     <div class="inbox">
-        <!--INFORMATION RELATED TO PROJECT BELOW THIS-->
+        <h1>SickoMail is our final year mini project. It is implemented with client-server architechture and is written in PHP, JavaScript, HTML, CSS.</h1>
     </div>
 </body>
+
 </html>

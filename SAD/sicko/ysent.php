@@ -21,7 +21,6 @@ $id = $_SESSION['sid'];
         <h4>SickoMail</h4>
         <nav>
             <ul class="nav__links">
-                <li><a href="yaboutus.php"><button>ABOUT US</button></a></li>
                 <li><a href="yhome.php?chk=logout"><button>LOGOUT</button></a></li>
             </ul>
         </nav>
@@ -37,7 +36,7 @@ $id = $_SESSION['sid'];
     ?>
 
     <div class="inbox">
-    <ul>
+        <ul>
             <li><a href="ycompose.php">COMPOSE</a></li>
             <li><a href="yhome.php">INBOX</li>
             <li><a href="ysent.php">SENT</a></li>
@@ -69,7 +68,8 @@ $id = $_SESSION['sid'];
                 echo "<form action='delete_msg.php' method='post'>";
                 echo "<td><input type='checkbox' name='ch[]' value='$mid'/></td>";
                 echo "<td>" . $rid . "</td>";
-                echo "<td><a href='yhome.php?coninb=$mid'>" . $s . "</a></td>";
+                #echo "<td><a href='ysent.php?coninb=$mid'>" . $s . "</a></td>";
+                echo "<td>" . $s . "</td>";
                 echo "<td>" . $m . "</td>";
                 echo "<td>" . $d . "</td>";
                 echo "</tr>";
@@ -93,24 +93,70 @@ $id = $_SESSION['sid'];
         @$coninb = $_GET['coninb'];
 
         if ($coninb) {
-            $sql = "SELECT * FROM usermail where rec_id='$id' and mail_id='$coninb'";
+            $sql = "SELECT * FROM usermail where sen_id='$id' and mail_id='$coninb'";
             $dd = mysqli_query($con, $sql);
             $row = mysqli_fetch_object($dd);
             echo "<br>";
-            echo "<th>";
+            echo "<tr>";
             echo "<td>Subject :</td>";
             echo "<td>" . $row->sub . "</td>";
-            echo "</th>";
-            echo "<th>";
+            echo "</tr><br><br>";
+            echo "<tr>";
             echo "<td>Message :</td>";
             echo "<td>" . $row->msg . "</td>";
-            echo "</th>";
-            echo "<th><a href='yhome.php'><button>Go Back</button></a></th>";
+            echo "</tr><br><br>";
+            echo "<tr><a href='ysent.php?chk=sent'><button>Go Back</button></a></tr>";
         }
 
         ?>
-    </div>
 
+
+
+
+
+
+
+
+
+
+    </div>
+    <?php
+    @$id = $_SESSION['sid'];
+    @$chk = $_REQUEST['chk'];
+    @$coninb = $_REQUEST['coninb'];
+    @$m = $_REQUEST[$mid];
+    if ($chk == "vprofile") {
+        include_once("editProfile.php");
+    }
+    if ($chk == "compose") {
+        include_once('ycompose.php');
+    }
+    if ($chk == "sent") {
+        include_once('ysent.php');
+    }
+    if ($chk == "trash") {
+        include_once('trash.php');
+    }
+    if ($chk == "setting") {
+        include_once('setting.php');
+    }
+    if ($chk == "chngPass") {
+        include_once('ychngpswd.php');
+    }
+    if ($chk == "chngthm") {
+        include_once('chngthm.php');
+    }
+    //if ($coninb == $m) {
+    //   include_once('ymessage.php');
+    //}
+    if ($chk == "draft") {
+        include_once('draft.php');
+    }
+    if ($chk == "updnews") {
+        include_once('latestupd.php');
+    }
+
+    ?>
 </body>
 
 </html>

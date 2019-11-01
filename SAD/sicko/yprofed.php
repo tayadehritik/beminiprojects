@@ -21,7 +21,6 @@ $id = $_SESSION['sid'];
         <h4>SickoMail</h4>
         <nav>
             <ul class="nav__links">
-                <li><a href="yaboutus.php"><button>ABOUT US</button></a></li>
                 <li><a href="yhome.php?chk=logout"><button>LOGOUT</button></a></li>
             </ul>
         </nav>
@@ -51,11 +50,6 @@ $id = $_SESSION['sid'];
             echo "<tr height='40'>";
             echo "<td>Your username :</td>";
             echo "<td>" . $row->user_name . "</td>";
-            echo "</tr>";
-
-            echo "<tr height='40'>";
-            echo "<td>Change Password :</td>";
-            echo "<td><a href='ychngpswd.php'>CHANGE PASSWORD</a></td>";
             echo "</tr>";
 
             echo "<tr height='40'>";

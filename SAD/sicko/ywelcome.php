@@ -18,17 +18,14 @@ error_reporting(1);
         <h4>SickoMail</h4>
         <nav>
             <ul class="nav__links">
-                <li><a href="yregister.php"><button>NEW USER?</button></a></li>
+                <li><a href="index.php"><button>LOGIN</button></a></li>
                 <li><a href="yaboutus.php"><button>ABOUT US</button></a></li>
             </ul>
         </nav>
     </header>
     <div class="inbox">
-    <h1>Welcome <?php session_start();
-                    echo @$_SESSION['sname'];
-                    ?>
-        ! Your account has been created,
-        to access your account click on Login Button Above</h1>
+        <h1>Welcome! Your account has been created,
+            to access your account click on Login Button Above</h1>
         <br><br>
         <h1>Happy SickoMailing!!!</h1>
 </body>
